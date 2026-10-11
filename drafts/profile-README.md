@@ -1,13 +1,15 @@
 # Hi, I'm Shayn
 
 I co-founded **Honey Go Fix It**, a plumbing and home-services company in Dayton, Ohio, and I build the software that
-runs it: phones, AI assistants, marketing, job costing, payroll, field-service data and the books.
+runs it: phones, AI assistants, marketing, job costing, payroll, field-service data and the books. I also founded
+**[FYProof](https://fyproof.com)**, which checks a video against every major platform's rules before it's posted.
 
-Most of it is private because it runs a real business. **[My portfolio](https://github.com/shaynhornik/portfolio)**
+Most of it is private because it runs real businesses. **[My portfolio](https://github.com/shaynhornik/portfolio)**
 explains every system in detail: what it does, how it's built, and the problems behind it.
 
 ### What I've built
 
+- **[FYProof](https://fyproof.com)**, a live SaaS for creators: upload a video, get a timestamped report of what could get it removed or demonetized on nine platforms, with fixes. 597 commits, 214 API routes and ~2,900 tests in 11 days. [Read more](https://github.com/shaynhornik/portfolio/blob/main/case-studies/17-fyproof.md)
 - **A self-hosted platform of ~10 internal apps** with one Google sign-in, central access control, a shared design
   system and encrypted backups: ~495 commits and ~195k lines in under four weeks. [Read more](https://github.com/shaynhornik/portfolio/blob/main/case-studies/01-hgfi-tools-platform.md)
 - **A company phone system on Telnyx** plus a native Kotlin calling app, with call answer-to-audio cut from 4.3 s to 1.8 s. [Read more](https://github.com/shaynhornik/portfolio/blob/main/case-studies/06-phone-system.md)
@@ -31,6 +33,8 @@ explains every system in detail: what it does, how it's built, and the problems 
 ![Android](https://img.shields.io/badge/Android-34A853?logo=android&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude_API-D97757?logo=anthropic&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?logo=stripe&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white)
 
 ### Open source
 

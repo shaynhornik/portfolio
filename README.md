@@ -1,7 +1,8 @@
 # Shayn Hornik: Portfolio
 
 I co-founded **Honey Go Fix It**, a plumbing and home-services company in Dayton, Ohio, and I build the software that runs it.
-Most of that software is private because it runs a real business with real customer data. This repo is the public
+I also founded **[FYProof](https://fyproof.com)**, a SaaS that checks a video against every major platform's rules before
+it's posted. Most of that software is private because it runs real businesses with real customer data. This repo is the public
 record of it: what each system does, how it is built, and the engineering problems behind it. The source stays closed,
 but the details here are specific enough to discuss line by line in an interview.
 
@@ -14,15 +15,22 @@ but the details here are specific enough to discuss line by line in an interview
 | | |
 |---|---|
 | **Internal platform** | A self-hosted suite of about ten web apps, three Android apps and shared infrastructure that replaced several paid SaaS products at HGFI: one Google sign-in, one access-control service, one design system |
+| **My own product** | [FYProof](https://fyproof.com): a video pre-publish checker for creators, live in public beta with paid plans; 597 commits, 159 pages, 214 API routes and ~2,900 tests in its first 11 days ([case study](case-studies/17-fyproof.md)) |
 | **Scale** | ~495 commits and ~195k lines across 12 private repos for the current suite (Sept 17 to Oct 11, 2026), plus an earlier production KPI and payroll platform (Feb to Sep 2026, 110 commits, ~40k lines) |
 | **Testing** | About 1,400 automated tests across the suite, plus end-to-end tests that place real phone calls and drive real browsers |
-| **Integrations** | 30+ external APIs: QuickBooks Online, Ramp, Plaid, ServiceTitan, Housecall Pro, Telnyx (voice, WebRTC, SIP, 10DLC SMS), Deepgram, Amazon SES/SNS, Anthropic Claude, OpenAI, Gemini, Google Workspace, Gmail, Firebase, Meta, Garmin and more |
+| **Integrations** | 30+ external APIs: QuickBooks Online, Ramp, Plaid, ServiceTitan, Housecall Pro, Telnyx (voice, WebRTC, SIP, 10DLC SMS), Stripe, Deepgram, Amazon SES/SNS, Anthropic Claude, OpenAI, Gemini, Google Workspace, Gmail, Firebase, Meta, Garmin and more |
 | **Open source** | 8 pull requests merged into 4 outside projects, including two Apache Software Foundation projects ([details](OPEN-SOURCE.md)) |
 | **How I build** | I design the systems, write the specs and business rules, and ship with AI pair-programming (Claude Code), with tests and safety gates as the contract ([details](HOW-I-BUILD.md)) |
 
 ---
 
 ## Featured systems
+
+### FYProof (Oct 2026, private source, live product)
+
+| System | What it does | Status | Case study |
+|---|---|---|---|
+| **FYProof** | Upload a video, get a timestamped report of what could get it removed, age-restricted or demonetized on nine platforms, with fixes and posting. Queue and worker pipeline (ffmpeg, child-safety hash matching, speech to text, an LLM checking a 926-rule sourced rulebook), Stripe billing, CI with automatic rollback | Public beta since Oct 7, paid plans live | [17](case-studies/17-fyproof.md) |
 
 ### The HGFI Tools platform (Sept to Oct 2026, private)
 
@@ -80,11 +88,11 @@ The full inventory, with which project uses what, is in [STACK.md](STACK.md). Th
 
 - **Languages:** TypeScript, Python, Kotlin, Java, Go, SQL, Bash
 - **Web:** Next.js (App Router), React, Tailwind, FastAPI, Payload CMS, Fastify, Express, htmx
-- **Data:** PostgreSQL (JSONB, row-level security, SQL functions), Prisma, SQLAlchemy, SQLite, pandas
-- **AI:** Claude API with structured output, multi-provider LLM routing, retrieval (BM25), evals and golden tests, speech-to-text, AI agents with human-in-the-loop approval
-- **Mobile:** Kotlin + Jetpack Compose, Android Telecom framework, WebRTC/ICE/TURN, Firebase Cloud Messaging, Accessibility services
-- **Infrastructure:** Docker, Caddy, oauth2-proxy, nginx, systemd, DigitalOcean, Google Cloud, Tailscale, encrypted backups and disaster recovery
-- **Domains:** telephony, accounting and reconciliation, payroll and compensation, field-service operations, email deliverability and SMS compliance
+- **Data:** PostgreSQL (JSONB, row-level security, SQL functions), pg-boss queues, Prisma, SQLAlchemy, SQLite, pandas
+- **AI:** Claude API with structured output, multi-provider LLM routing, multimodal video analysis, prompt-injection defense, retrieval (BM25), evals and golden tests, speech-to-text, AI agents with human-in-the-loop approval
+- **Mobile:** Kotlin + Jetpack Compose, Android Telecom framework, WebRTC/ICE/TURN, Firebase Cloud Messaging, Accessibility services, Expo / React Native
+- **Infrastructure:** Docker, Caddy, oauth2-proxy, nginx, systemd, GitHub Actions CI with packaged releases and automatic rollback, DigitalOcean, Google Cloud, Tailscale, encrypted backups with restore tests
+- **Domains:** telephony, accounting and reconciliation, payroll and compensation, field-service operations, email deliverability and SMS compliance, video processing (ffmpeg), payments (Stripe), trust and safety
 
 ---
 
@@ -97,7 +105,7 @@ The full inventory, with which project uses what, is in [STACK.md](STACK.md). Th
 | Feb 2026 | Performance Center goes to production: KPIs, commissions and weekly payroll for the field team |
 | Aug 2026 | Rebuilt the company's books from 2022 with a Python reconciliation toolkit and the QuickBooks API |
 | Sep 2026 | First merged contributions to Apache projects; started the HGFI Tools platform (Sept 17) |
-| Oct 2026 | Marketing platform in production; phone system, Android calling app and AI assistant in pilot |
+| Oct 2026 | Launched FYProof in public beta six days after its first commit; HGFI marketing platform in production; phone system, Android calling app and AI assistant in pilot |
 
 ---
 
