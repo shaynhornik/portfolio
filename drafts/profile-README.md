@@ -2,6 +2,7 @@ Hi, I'm Shayn. I co-founded a plumbing company in Dayton, Ohio, and I build the 
 phone system, scheduling and AI tools, and how they connect to ServiceTitan.
 
 That code is private, so my [portfolio](https://github.com/shaynhornik/portfolio) describes how it works. I also send
-fixes to open-source projects, mostly [securo](https://github.com/securo-finance/securo).
+fixes to open-source projects, mostly [Apache DevLake](https://github.com/apache/devlake) and
+[securo](https://github.com/securo-finance/securo).
 
 [LinkedIn](https://www.linkedin.com/in/shaynhornik) · shaynhornik@gmail.com

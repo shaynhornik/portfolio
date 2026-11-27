@@ -32,9 +32,9 @@ platforms' content rules before it's posted. In public beta.
 
 ## Open source
 
-I've had 19 pull requests merged into other people's projects, most of them to
-[securo](https://github.com/securo-finance/securo), a self-hosted finance app, plus one each to Apache iceberg-python,
-Apache Maka and TheNinjaRPG. The list is in [OPEN-SOURCE.md](OPEN-SOURCE.md).
+I've had 31 pull requests merged into other people's projects: 9 at the Apache Software Foundation (DevLake and
+its Helm chart, Texera, iceberg-python and Maka), 21 to [securo](https://github.com/securo-finance/securo), a
+self-hosted finance app, and one to TheNinjaRPG. The list is in [OPEN-SOURCE.md](OPEN-SOURCE.md).
 
 ## How I work
 
